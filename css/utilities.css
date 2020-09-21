@@ -65,6 +65,11 @@
 }
 
 /* Flex Columns */
+
+.flex-columns.flex-reverse .row {
+  flex-direction: row-reverse;
+}
+
 .flex-columns .row {
   display: flex;
   flex-direction: row;
@@ -141,4 +146,8 @@
   flex: 25%;
   max-width: 25%;
   padding: 0 4px;
+}
+
+.team img {
+  border-radius: 50%;
 }
