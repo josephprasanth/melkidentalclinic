@@ -38,7 +38,7 @@ img {
 
 /* Navbar */
 
-#navbar {
+.navbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -50,6 +50,11 @@ img {
   position: fixed;
   top: 0px;
   padding: 0 30px;
+  transition: 0.5s;
+}
+
+.navbar.top {
+  background-color: transparent;
 }
 
 .navbar a {

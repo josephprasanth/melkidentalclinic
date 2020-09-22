@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+      integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+      crossorigin="anonymous"
+    />
+    <link rel="shortcut icon" type="image/x-icon" href="./img/tooth.ico" />
+    <link rel="stylesheet" href="./css/utilities.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <title>Välkommen Till Melki Tändvården</title>
+  </head>
+  <body id="home">
+    <header class="hero">
+      <div id="navbar" class="navbar top">
+        <h1 class="logo">
+          <span class="text-primary">
+            <i class="fas fa-tooth"></i>
+            Melki
+          </span>
+          <span>Tandvård</span>
+        </h1>
+        <nav>
+          <ul>
+            <li><a href="./index.html">Hem</a></li>
+            <li><a href="#omoss">Om oss</a></li>
+            <li><a href="#priser">Priser</a></li>
+            <li><a href="#staff">Staff</a></li>
+            <li><a href="#kontakt">Kontakt</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="content">
+        <h1>We will make you smile</h1>
+        <p>We have world class dental services since 1995</p>
+        <a href="#omoss" class="btn"
+          ><i class="fa fa-chevron-right"></i>Know More</a
+        >
+      </div>
+    </header>
+    <main>
+        <section id="success" class="bg-primary py-3 text-center">
+            <div class="container">
+                <h1 class="l-heading">Thank You For Your Submission</h2>
+                  <p class="lead">We will get back to you soon</p>
+                  <a href="/index.html">Go Back</a>
+            </div>
+        </section>
+
+    </main>
+    <footer class="footer bg-dark">
+      <div class="social">
+        <a href="#"><i class="fab fa-facebook fa-2x"></i></a>
+        <a href="#"><i class="fab fa-twitter fa-2x"></i></a>
+        <a href="#"><i class="fab fa-youtube fa-2x"></i></a>
+        <a href="#"><i class="fab fa-linkedin fa-2x"></i></a>
+      </div>
+      <p>Copyright &copy; 2020 - All rights reserved.</p>
+      <p>Design by Prasanth Joseph</p>
+    </footer>
+    <script
+      src="https://code.jquery.com/jquery-3.5.0.min.js"
+      integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ="
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      const navbar = document.getElementById("navbar");
+      let scrolled = false;
+
+      window.onscroll = function () {
+        if (window.pageYOffset > 100) {
+          navbar.classList.remove("top");
+          if (!scrolled) {
+            navbar.style.transform = "translateY(-70px)";
+          }
+          setTimeout(function () {
+            navbar.style.transform = "translateY(0)";
+            scrolled = true;
+          }, 200);
+        } else {
+          navbar.classList.add("top");
+          scrolled = false;
+        }
+      };
+
+      // Smooth Scrolling
+      $("#navbar a, .btn").on("click", function (e) {
+        if (this.hash !== "") {
+          e.preventDefault();
+
+          const hash = this.hash;
+
+          $("html, body").animate(
+            {
+              scrollTop: $(hash).offset().top - 100,
+            },
+            800
+          );
+        }
+      });
+    </script>
+  </body>
+</html>
