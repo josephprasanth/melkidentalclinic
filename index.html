@@ -214,7 +214,7 @@
           <div class="column">
             <div class="column-2 bg-light">
               <h2>Contact Us</h2>
-              <form action="process.php" class="callback-form">
+              <form action="process.php" mathod="POST" class="callback-form">
                 <div class="form-control">
                   <label for="name"></label>
                   <input
@@ -246,6 +246,37 @@
                   <input type="submit" value="Send" id="submit" class="btn" />
                 </div>
               </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Adress Opentimes: Icons -->
+      <section id="about" class="icons bg-light">
+        <div class="flex-items">
+          <div>
+            <i class="fas fa-map-marker-alt fa-2x"> </i>
+            <div>
+              <h3>Our Address</h3>
+              <p>Slåttervägen 2</p>
+              <p>15154 Södertälje</p>
+            </div>
+          </div>
+
+          <div>
+            <i class="fas fa-mobile-alt fa-2x"> </i>
+            <div>
+              <h3>Telephone</h3>
+              <p>08-55061066</p>
+            </div>
+          </div>
+
+          <div>
+            <i class="fas fa-clock fa-2x"> </i>
+            <div>
+              <h3>Opening Times</h3>
+              <p>Monday - Thursday: 8.00 - 17.00</p>
+              <p>Friday: 8.00 - 13.00</p>
             </div>
           </div>
         </div>
@@ -288,7 +319,7 @@
       };
 
       // Smooth Scrolling
-      $("#navbar a, .btn").on("click", function (e) {
+      $("#navbar a").on("click", function (e) {
         if (this.hash !== "") {
           e.preventDefault();
 

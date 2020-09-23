@@ -211,6 +211,8 @@ img {
   }
   .flex-items {
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
   .flex-columns .column,
   .flex-grid .column {

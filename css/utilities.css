@@ -54,8 +54,8 @@
 /* Flex Items */
 .flex-items {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-start;
+  justify-content: space-around;
   text-align: center;
   height: 100%;
 }
